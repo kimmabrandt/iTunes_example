@@ -1,0 +1,15 @@
+<h1>Search Itunes</h1>
+
+<%= form_tag '/search' do %>
+	<div class="row">
+		<div class="col-xs-10">
+			<%= text_field_tag 'artist', 'arcade fire', class: 'form-control' %>
+		</div>
+		<%= button_tag(type: 'submit', class: 'btn btn-info') do %>
+		Search Artists
+		<span class='glyphicon glyphicon-search'></span>
+		<% end %> 
+	</div>
+<% end %>
+
+<p>I would like to say: <%= ENV['SECRET_KEY'] %></p>

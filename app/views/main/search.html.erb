@@ -1,0 +1,10 @@
+<h2 class="text-center">SEARCH RESULTS</h2>
+
+<% for i in (0...@results.length) do %>
+<p>
+<%= i.to_s %>:
+<%= @results[i]["trackName"] %> by <%= @results[i]["artistName"] %> 
+<%= link_to 'Details', '/show/' + @results[i]["trackId"].to_s, class: 'btn-sm btn-info' %>
+<% end %>
+<hr>
+<%= link_to 'Home', '/', class: 'btn btn-success' %>
